@@ -1,0 +1,351 @@
+
+/* 引用 */
+
+article blockquote{
+	background-color:#fdffe0;
+	border: solid 3px #6e6e6e;
+	padding:20px;
+}
+
+article blockquote>p{
+	padding:0 46px;
+}
+
+article blockquote:before{
+	direction:rtl;
+	transform:			scale( -1, 1);
+	-o-transform:			scale( -1, 1);
+	-ms-transform:			scale( -1, 1);
+	-moz-transform:			scale( -1, 1);
+	-webkit-transform:		scale( -1, 1);
+	filter:				fliph();
+	-ms-filter:			fliph();
+}
+
+article blockquote:before,article blockquote:after{
+	content: '\f106';
+	display:block;
+	font-family: 'Genericons';
+	font-size:46px;
+}
+
+
+article blockquote:after{
+	text-align:right;
+}
+
+
+/* 背景 */
+body{
+	/*background-attachment:scroll;
+	background-repeat: repeat;
+	background-position: top left;*/
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+/* タイトル */
+h1.entry-title{
+	padding:10px;
+	border: solid 3px #005c0a;
+	border-top: none;
+	border-right: none;
+}
+
+div.entry-content h2,h3{
+	padding:10px;
+	border-left:solid 3px #00135c;
+}
+
+
+header.entry-header{
+	background-color:#47f7ff;
+}
+
+iframe[src*="www.youtube"]{
+	display:block;
+	margin:16px auto;
+}
+
+/* adsense 背景 */
+ins.adsbygoogle{
+	padding-bottom:30px;
+	background: none repeat scroll 0 0 transparent;
+}
+.featured-content ins.adsbygoogle{
+	padding:0;
+}
+
+/* 広告ラベル */
+.entry-content ins.adsbygoogle:before{
+	background-color:#CCFF00;
+	border:solid 1px #c4c4c4;
+	border-bottom:none;
+	border-radius: 10px 10px 0 0;
+	content:"  広告  ";
+	color:#2a24f7;
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	margin-left:90px;
+	max-width:70px;
+	padding:0 0 0 30px;
+	text-align:left;
+}
+
+
+/* 記事下広告 */
+/*
+ins.adsbygoogle.footer-ad{
+	margin:0 auto;
+	max-width:336px;
+}
+*/
+
+.amz-item a[href^="http://www.amazon.co.jp/"]{
+    background-color: #428bca;	
+    border-color: #46b8da;
+    color: #fff;
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.crp_thumb{
+	width:100%;
+}
+
+.entry-content{
+	font-size:16px;
+	/* letter-spacing:0.1em; */
+	line-height:1.7em;
+}
+
+/* flickrのアトリビューション */
+/* .entry-content a[href^='https://www.flickr.com/photos/']:after{
+	content: attr(title);
+} */
+
+/* 記事タイトル */
+.entry-title{
+	text-transform: none;
+}
+
+
+#main,body{
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEX////w8PBJB7MPAAAAdElEQVR4Xu3PMQ5EQACF4VciWyAK7UQkdPYKIxFRiRtwlrFRKBQuIHEScbDtX1Tq1/ztnw+fOry/FMTuKDoKjGdDR4HdzjKgwI1pE1GwZt5VUTAks2kpz6N+z31LwTKlP0N5J5JIIokkkkgiiSSSSCKJJPoDn958rmW4fOIAAAAASUVORK5CYII=);
+}
+
+
+/*ソーシャル（シェア）ボタン*/
+
+#facebook-ico a{
+	background-color:#560070;
+}
+
+#facebook-ico a:before{
+	content: '\f204';
+}
+
+#facebook-ico a:hover{
+	/* content: '\f221'; */
+	background-color:#9f00eb;
+}
+
+#feed-ico a{
+	background-color:#a37400;
+}
+
+#feed-ico>a:before{
+	content: '\f413';
+}
+
+#feed-ico a:hover{
+	background-color:#ffc95c;
+}
+
+#google-plus-ico a{
+	background-color:#a8001d;
+}
+
+#google-plus-ico a:before{
+	content: '\f218';
+}
+
+#google-plus-ico a:hover{
+	background-color:#ff6e5c;
+}
+
+#hatebu-ico a{
+	background-color:#0874ba;
+}
+
+li#hatebu-ico>a:before{
+	content: "B!";
+    font-family: Verdana;
+    font-weight: bold;
+	position:relative;
+}
+
+li#hatebu-ico a:hover{
+	background-color:#5c9fff;
+}
+
+#misc-links a{
+	color:#fcfcfc;
+}
+
+#misc-links a:before{
+	font-family:'Genericons';
+	font-weight:normal;
+	text-align:center;
+}
+
+#misc-links li a{
+	display:inline-block;
+	font-size:20px;
+	margin:0;
+	max-width:300px;
+	padding:20px 10px;
+	width:100%;
+	margin-bottom:2px;
+}
+
+/* ページ全体を中央寄せ */
+/*
+#page {
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+#tumblr-ico a{
+	background-color:#0900a3;
+}
+
+#tumblr-ico a:before{
+	content: '\f214';
+}
+
+#tumblr-ico a:hover{
+	background-color:#3614ff;
+}
+
+#twitter-ico a{
+	background-color:#008ba3;
+}
+
+#twitter-ico a:before{
+	content: '\f202';
+}
+
+#twitter-ico a:hover{
+	background-color:#5ccaff;
+}
+
+/* サイド等のサムネイル調整 */
+li.RecentPostsPlus img{
+	display:block;
+/*	-webkit-filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: gray; 
+	*/
+}
+/*
+li.RecentPostsPlus img:hover{
+	-webkit-filter: grayscale(0%);
+	filter: none;
+}
+*/
+li.RecentPostsPlus{
+	margin-bottom:10px;
+}
+
+
+aside.related_posts_by_taxonomy figure.gallery-item{
+	/* max-width:100%; */
+	/* 下マージン */
+	margin-bottom:26px;
+}
+aside.related_posts_by_taxonomy figure.gallery-item:last-child{
+	margin-bottom:0
+}
+
+/* ポストサムネイル (アイキャッチ)の背景をdata uriに差し替え */
+.post-thumbnail{
+	background:#b2b2b2 url(data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2230px%22%20height%3D%2230px%22%20viewBox%3D%220%200%2030%2030%22%20enable-background%3D%22new%200%200%2030%2030%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M0%2C15v-4L11%2C0h4L0%2C15z%20M10%2C0H6L0%2C6v4L10%2C0z%20M20%2C0h-4L0%2C16v4L20%2C0z%20M25%2C0h-4L0%2C21v4L25%2C0z%20M26%2C0L0%2C26v4L30%2C0H26z%20M5%2C0H1L0%2C1v4L5%2C0z%20M5%2C30L30%2C5V1L1%2C30H5z%20M10%2C30l20-20V6L6%2C30H10z%20M15%2C30l15-15v-4L11%2C30H15z%20M20%2C30l10-10v-4L16%2C30H20z%20M25%2C30l5-5v-4l-9%2C9H25z%20M30%2C30v-4l-4%2C4H30z%22%2F%3E%3C%2Fsvg%3E) repeat fixed;
+}
+
+/* 関連記事のキャプションを常時表示 */
+.related_posts_by_taxonomy figcaption.gallery-caption{
+	opacity:1;
+}
+
+/* 画像ラベル */
+.site-content figure>a[href^="http://www.amazon.co.jp/"]:before{
+	/* amazon画像 */
+	background-color:#CCFF00;
+	border:solid 1px #c4c4c4;
+	border-bottom:none;
+	border-radius: 10px 10px 0 0;
+	content:" \f442 Amazon  ";
+	color:#2a24f7;
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	margin-left:1px;
+	padding:0 10px 0 10px;
+	text-align:left;
+    font-family:'Genericons';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.site-content figure>a[href^="http://www.amazon.co.jp/"]:after{
+	content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAaCAMAAAAOqwd2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5QTFRFqqqq/v7+AAAA4+Pj/f394uLi+/v7/Pz85OTk6Ojo5ubm5eXl+vr6+Pj49/f36enp7Ozs6urq9vb27e3t7+/v8/Pz9PT0BAcH8PDw8fHxnZ2dysrKpKSkxcXF4ODgX19fwcHBoKCgICAg1dXVYmJim5ubx8fHYGBgzs7OxMTEn5+f5+fnwsLCPj4+YWFhwMDAnJyczMzMzc3NmJiY09PTTk5Ofn5+IiIiISEhxsbGnp6ey8vLsrKy4eHhmZmZZGRkJCQkra2t3t7erKys0NDQyMjIv7+/XV1dTExMVFRUHx8f29vbjIyM0dHR2dnZZmZmUFBQXFxcoqKiT09P3Nzc39/fr6+vTU1NOzs7OTk5l5eXOjo66+vrcnJy19fX7u7ucXFxvr6+sLCwdnZ2sbGxXl5eY2NjlpaWvLy8tbW1gYGBfHx8kJCQg4ODgICAjo6OzM3Nr7Cwn6Cgvb29k5OTfX19Nzc3ZWVluLi4q6ur0tLSBgkJtLS0w8TEIyMjCw4Ot7e3qampODg4p6enc3NzycnJJSUlFxoaKCsrtra22NjYqKioZWdnCAsLERQUmZqadXV1UFJS0dLSmpubkJGRz8/PtLW1QEND7O3thYaGPDw8X2FhIiQkvr+/4eLi1dbWamxsVFZWmJmZbG5ufH19bGxscnNzFRgYFhkZbW1tUlJSQkRE09TUhYWFRkhIDA8PWFpad3d3nJ2dcXJyODs7S0tLT1FRsLGxS01NgoKCBQgIW1xcurq6iYmJHiEhpaWlBwoKc3R0XmBgb3Fxl5iYDRAQhoaGj5CQSUtLpqamoqOjsrOzGx4eLS8vEhQUd3h41tbWHiAghISEgYODm5ycEBISZGZmkZGRKy0tFBcXPz8/w8PDg4SErq6uMzU12traXF1dlZaWMjQ0a21tDxISlJSUs7Ozi4uLpaamKy4ueHl5lZWVdnh4+fn59fX1kJKSMDMzYmRk3N3dCg0NU1NTV1lZo6OjhIaGqKmp////ZyzQkgAAAPp0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AN5gRSMAAAT9SURBVFjDzZh1UBtbFMbTLw9aoLBJNpvdTUIISUiBlAQCQYpbcWmheN3d3eXVn7u7u7u7u7u7K/+9czdkE/r6Oq8zb+blN5N7v/Ode3a/uZnwB5rBUl+JJorp8pUOampq4wwjopjvuNoaTXXsiCgntlqjOSbqoS99ZATSiktuPPgRNzK6oJCxYU6/UmQ8f0dsVEEhR6tcsJUSPkif184Mm6Nb/a2j/18oZKLKJ6J4bp7pD0q5PGwm7sbuxKMmPT29der6qYlvpFOxftu/G5r6zuF9Cpmk8uhFt36ZlDSKQt4cNi14Gy8mHS0AXHzhov1gj+9x7WcGEWr7e3YNO+4y80lJvAb7DvswCmmI5Hvn/B8o5KthZy6ssBoMAxabzWodGJhltZDptFqn02ZhOA0G6jhZ6RywWm1saL6Z0d7jgjlH58IC5GB7+4IFYD3d9hjD5PntORFv1U1GYYzBXGieYjgcFNIU5ueDbym/HPGUsNdQwaHNZKpFA93ETWzJM3Uhqw0NJpNyO22mechqwDdUZlUAFWxoUxoxzdsBr3eTD4X9XhOKvWlpoJa+ECj2FXaYhlG8hJalTiZ9/Uv0w5sUUlDx7xHFG+58mEKeoHpVmCn8CkFwI6uKq8BEYSJ9srIE4XG4BbfbPVMpOWEmqgTKL7SRTVD4MYJgAdPOfsfnHCxjKKQgcAGHJeBwCpFMWjIpKKbtZDP9CHDD+hRSVjlDFO93yjEU8mLVq0SqfB2S5WTa5bWQFZFaKcuryJTlzooKjwer2Ll7ZayV5VTFlsvKykrKlIuulT2OMjyFgKO3l8bzUSJ7Ao48OlMyJkhzrQP5bCgfzXKeI+ApQcAjR0AhpRDau0Xxa0k6mUKeqpovo0aioBJlk6RySEHRlHoikCwxpzLosAXlkpSq2BKlS+l0PwC3O97NovYivzclBVIz8qnb6XB0StKslCDNUnzZPHLzqRffjQ3UQfcGKQyFNIa4ltI9YjReStuHqrkFmZmLcbUxA5lGYzmMisjElsWLkWE0rkN50FEWVmQy29iUSxQVWVFU1GLM/QLzWlCUkpsL44wU5akt6E4wDqepG6tpW21lRZHD0RJuUUg+RNwvovjpuw8dRyE3njfk+YN/OqAdi3E8Pwc8T0KLOVp+HMby2rPhV5zggjm8YvN8Mup3DE3O5utno74PybP7+qC+qwv1Wj4CbV8jfo+oT2tEl1pQSJ3KOcove+P1orhn85BlhpnWXdhnZ8IFnY6EohfBTt1F7BDu0uk0VMLFBuzkZCBjLtimtOdi4VVYuKOuDuF33deYHi7SFzaiLqJmVmO9qimkXqX0HrrFH9/z3L53WchqRzGt2VjqQ7Ze74JeT6IYLltxAbKdwNLs7AP6yQVOm6tAr4eLHfXRwFh2h2wj7Uc1pvhxW13dGoTfpZ8SoS/DmnX6Q7DZVEkhOYWEF2y0Tlr2Aa1xCU2vX/OmUqOANS3oGI80jvOC45iYBhTs7CkYr3yfXs7ZQfV4jiPJpYEElzMhx/4Z25Rn22lsQg7HVQfLv2O3c0eCQsYF2fbVE9q4EJ4DKz5OiPtnjp1+5Pq/hULGD7H5uSt+ejqdROvyy/e+X3JhfNRAIRNC2F55VhS3Hv+YKL501vnLbAlRA4UcFcb25y0nPfnbt8+UjooqNJrqUm2UU1qpqVmZVxUTxVTlrazRDMbYZ0TzPwdm2GMG/wKaQ2cpeRnzEwAAAABJRU5ErkJggg==);
+	display:block;
+	text-align:right;
+}
+
+.site-content figure>a[href^="https://www.youtube.com/"]:before{
+	/* YOUTUBEの画像 */
+	background-color:#CCFF00;
+	border:solid 1px #c4c4c4;
+	border-bottom:none;
+	border-radius: 10px 10px 0 0;
+	content:"  \f442 YOUTUBE  ";
+	color:#2a24f7;
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	margin-left:1px;
+	padding:0 10px 0 10px;
+	text-align:left; 
+	font-family:'Genericons';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.site-content figure>a[href^="https://www.youtube.com/"]:after{
+	content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAxlBMVEX///+mPTnd3d3n5+eeDgmZDgnAEQq7EQregH2/JB7LQDrSQTulIR2sPTmkEQvV1dXx8fHGfnu1Egz5+fmRDQjEEQuvEAqqDwmVDgikDwm1EArIEgvIFxDbaGPbnZu1HRjTmpi3GBKpGxbo6OjMv7/aZWDJMy3QOzWjGxX89fWsjYxvFBCYDgiOMC3npaOdFxPLyMi+Hxh0CgebDgn37+/RY1+WDglcCAWBDAiIU1Hy8vL69fW4ZGHBFxCvHRehMS3FgX77+Pg08Lg6AAAAAXRSTlMAQObYZgAAAH5JREFUeF6FxkMCxDAABdCfpDbGtm3j/peaYDZd9a0e8k2HbqP+N3abgFXMsOAY3HM1MhQHtslt08PRlGwkNa4dRbdWVyxBSXgxxvodWZSFHqV0sJRFUOUmYTibL8QCeBq33lx3e03w4Ovc6XzRFR9xJSPG/UFIQXkT8vki1w95ehBDKnWtXAAAAABJRU5ErkJggg==) " YouTubeで視聴";
+	display:block;
+	font-size:14px;
+	text-align:right;
+}
+
+
+
+
+
+
