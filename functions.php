@@ -299,3 +299,11 @@ add_action('wp_head', 'add_ad_script');
 //jpegの圧縮品質
 //default = 90
 add_filter('jpeg_quality', function($arg){return 50;});
+
+
+//CloudFlareのUniversal SSLを利用し、Flexible SSLに対応するため、$_SERVER['HTTPS']に強制的に'on'を設定する
+function override_server_https_env(){
+	$_SERVER['HTTPS'] = 'on';
+}
+
+add_action('after_setup_theme', 'override_server_https_env');
