@@ -3,7 +3,7 @@ $(function(){
 	"use strict";
 	//console.log("script start");
 	try{
-		var title = $("title").eq(0).text(), url = $('link[rel="canonical"]').eq(0).attr("href") || document.URL.replace(/[?#].*$/g,''),icos,i,lurl,alen,temp,
+		var title = $("title").eq(0).text(), url = $('link[rel="canonical"]').eq(0).attr("href") || document.URL.replace(/[?#].*$/g,''), icos, i, lurl, alen, temp, 
 es = function(raw){
 	return encodeURIComponent(raw).replace(/[!'()]/g, escape).replace(/\*/g, "%2A");
 };
@@ -35,23 +35,20 @@ es = function(raw){
 	}
 	
 	var urls = [
-		"www.srytk.com",
-		"ecx.images-amazon.com",
 		"s.ytimg.com",
 		"pbs.twimg.com",
-		"//srytk.com/"
 	];
 
 	
 
-
-	if(/^http?:\/\/srytk.com\/\d+\.html[^\/]*$/.test(document.URL)){
+	if(/^https?:\/\/srytk.com\/\d+\.html[^\/]*$/.test(document.URL)){
 		var re = /\.(jpe?g|png|gif|webp|html?)$/;
 		var re_thumb = /-\d{2,3}x\d{2,3}\.(jpe?g|png|gif|webp)$/;
+		var scheme = window.location.protocol;
 	
 		//記事内内部リンク
-		$("#content .entry-content a[href^='http://srytk.com/']").each(function(ind){
-			if(ind > 29){
+		$("#content .entry-content a[href^='"+scheme+"//srytk.com/']").each(function(ind){
+			if(ind > 4){
 				return false;
 			}
 
@@ -62,7 +59,7 @@ es = function(raw){
 		});
 
 		//関連記事のリンク
-		$("#related-posts-by-taxonomy-2 a[href^='http://srytk.com/']").each(function(ind){
+		$("#related-posts-by-taxonomy-2 a[href^='"+scheme+"//srytk.com/']").each(function(ind){
 			if(ind > 10){
 				return false;
 			}
@@ -70,7 +67,7 @@ es = function(raw){
 			var postLink = $(this).attr("href");
 			if(re.test(postLink)){
 				urls.push(postLink);
-				var thumbnailImageURL = $(this).find("img[src^='http://srytk.com/']").eq(0).attr("src");
+				var thumbnailImageURL = $(this).find("img[src^='"+scheme+"://srytk.com/']").eq(0).attr("src");
 				if(re_thumb.test(thumbnailImageURL)){
 					urls.push(thumbnailImageURL.replace(re_thumb,".$1")); //アイキャッチのオリジナルサイズを追加
 				}
@@ -79,8 +76,8 @@ es = function(raw){
 	}
 
 	//新着記事のhtml
-	$("#recent-posts-plus-2 .RecentPostsPlus a[href^='http://srytk.com/']").each(function(ind){
-		if(ind>15){
+	$("#recent-posts-plus-2 .RecentPostsPlus a[href^='"+scheme+"//srytk.com/']").each(function(ind){
+		if(ind>3){
 			return false;
 		}
 
@@ -134,7 +131,6 @@ es = function(raw){
 			}).insertBefore(anc);
 		})
 	});
-
 
 
 });
