@@ -312,7 +312,7 @@ function add_hsts_header(){
 	//とりえず3日
 	$age = 60*60*24*3;
 
-	header("Strict-Transport-Security: ".$age);
+	header("Strict-Transport-Security: max-age=".$age);
 }
 
 add_action('wp', 'add_hsts_header');
