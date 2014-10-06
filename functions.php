@@ -307,3 +307,12 @@ function override_server_https_env(){
 }
 
 add_action('after_setup_theme', 'override_server_https_env');
+
+function add_hsts_header(){
+	//とりえず3日
+	$age = 60*60*24*3;
+
+	header("Strict-Transport-Security: ".$age);
+}
+
+add_action('wp', 'add_hsts_header');
