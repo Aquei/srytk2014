@@ -259,6 +259,7 @@ function add_ad_dns_prefetch_code(){
 	$domains = array(
 		'www.gstatic.com',
 		'googleads.g.doubleclick.net',
+		'tpc.googlesyndication.com',
 		'www.google-analytics.com',
 		'ajax.cloudflare.com',
 		'i.ytimg.com',
@@ -290,11 +291,11 @@ function add_favicon(){
 add_action('wp_head', 'add_favicon');
 
 function add_ad_script(){
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
+	echo '<script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
 	//echo '<script async src="//www.gstatic.com/pub-config/ca-pub-6931805962182644.js"></script>'; //firefoxでなぜか２回リクエストが走るのでコメントアウト
 }
 
-add_action('wp_head', 'add_ad_script');
+add_action('wp_footer', 'add_ad_script');
 
 //jpegの圧縮品質
 //default = 90
