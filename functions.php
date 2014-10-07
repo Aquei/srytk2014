@@ -119,8 +119,8 @@ function register_jquery() {
 
 
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', get_stylesheet_directory_uri()."/js/sitescript.js", false, null, true );
-    wp_enqueue_script( 'jquery' );
+    //wp_register_script( 'jquery', get_stylesheet_directory_uri()."/js/sitescript.js", false, null, true );
+    //wp_enqueue_script( 'jquery' );
 }
 
 add_action( 'wp_enqueue_scripts', 'register_jquery' );
@@ -316,3 +316,27 @@ function add_hsts_header(){
 }
 
 add_action('wp', 'add_hsts_header');
+
+
+function ga_tracker(){
+	//google analytics tracker
+	//inline scriptはcssより早く実行されるべき
+	echo '<script>!function(a,b,c){a.GoogleAnalyticsObject=c,a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)},a[c].l=1*new Date}(window,document,"ga"),ga("create","UA-51729378-1","auto"),ga("send","pageview");</script>';
+}
+
+add_action('wp_head', 'ga_tracker', 1); //引数をとらず、またデフォルト(10)より早く実行
+
+//async deferにするためマニュアルで挿入
+function set_google_analytics_script(){
+	echo '<script async defer src="//www.google-analytics.com/analytics.js"></script>';
+}
+add_action('wp_footer', 'set_google_analytics_script');
+
+
+//async deferにするためマニュアルで挿入
+function set_site_script(){
+	$stamp = filemtime(get_stylesheet_directory()."/js/sitescript.js");
+	echo '<script async defer src="'.get_stylesheet_directory_uri().'/js/sitescript.js?ver='.$stamp.'"></script>';
+}
+
+add_action('wp_footer', 'set_site_script');
