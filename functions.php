@@ -257,17 +257,17 @@ add_action( 'wp', 'add_my_cache_control' , 11 );
 //ad dns-prefetch
 function add_ad_dns_prefetch_code(){
 	$domains = array(
-		'www.gstatic.com',
+		//'www.gstatic.com',
 		'googleads.g.doubleclick.net',
 		'tpc.googlesyndication.com',
-		'www.google-analytics.com',
-		'ajax.cloudflare.com',
+		//'www.google-analytics.com',
+		//'ajax.cloudflare.com',
 		'i.ytimg.com',
 		'images-na.ssl-images-amazon.com',
 		'www.google.com',
-		't0.gstatic.com',
-		't1.gstatic.com',
-		't2.gstatic.com'
+		'encrypted-tbn1.gstatic.com',
+		'encrypted-tbn2.gstatic.com',
+		'encrypted-tbn3.gstatic.com'
 	);
 
 	/*
