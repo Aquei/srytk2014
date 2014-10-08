@@ -356,20 +356,20 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
 /* Animations */
 
 @-moz-keyframes gray2normal{
-	0% { filter:grayscale(100%) }
-	100% { filter:grayscale(0%) }
+	0% { filter:invert(100%) }
+	100% { filter:invert(0%) }
 }
 @-webkit-keyframes gray2normal{
-	0% { -webkit-filter:grayscale(100%) }
-	100% { -webkit-filter:grayscale(0%) }
+	0% { -webkit-filter:invert(100%) }
+	100% { -webkit-filter:invert(0%) }
 }
 @-o-keyframes gray2normal{
-	0% { filter:grayscale(100%) }
-	100% { filter:grayscale(0%) }
+	0% { filter:invert(100%) }
+	100% { filter:invert(0%) }
 }
 @keyframes gray2normal{
-	0% { filter:grayscale(100%) }
-	100% { filter:grayscale(0%) }
+	0% { filter:invert(100%) }
+	100% { filter:invert(0%) }
 }
 
 /* アイキャッチにアニメーションを追加 */
