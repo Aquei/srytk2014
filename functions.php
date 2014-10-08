@@ -292,7 +292,7 @@ add_action('wp_head', 'add_favicon');
 
 function add_ad_script(){
 	echo '<script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
-	//echo '<script async src="//www.gstatic.com/pub-config/ca-pub-6931805962182644.js"></script>'; //firefoxでなぜか２回リクエストが走るのでコメントアウト
+	echo '<script async defer src="//www.gstatic.com/pub-config/ca-pub-6931805962182644.js"></script>'; 
 }
 
 add_action('wp_footer', 'add_ad_script');
