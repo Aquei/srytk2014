@@ -46,7 +46,7 @@ function check_update_css(){
 	}
 
 	if(filemtime($ori_path) < $max_time){
-		$str = '@charset "UTF-8";';
+		$str = '@charset "UTF-8";'."\n";
 
 		foreach($paths as $p){
 			$str .= file_get_contents($p);
