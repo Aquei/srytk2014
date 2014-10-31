@@ -101,7 +101,7 @@ ins.adsbygoogle.footer-ad{
 	max-width:336px;
 }
 */
-
+/*
 .amz-item a[href^="http://www.amazon.co.jp/"]{
     background-color: #428bca;	
     border-color: #46b8da;
@@ -125,7 +125,7 @@ ins.adsbygoogle.footer-ad{
 .crp_thumb{
 	width:100%;
 }
-
+*/
 .entry-content{
 	font-size:16px;
 	/* letter-spacing:0.1em; */
@@ -295,9 +295,8 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
 }
 
 /* 画像ラベル */
+/*
 .site-content figure>a[href^="http://www.amazon.co.jp/"]:before{
-	/* amazon画像 */
-	/* background-color:#CCFF00; */
 	border:solid 1px #c4c4c4;
 	border-bottom:none;
 	border-radius: 10px 10px 0 0;
@@ -314,6 +313,7 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+*/
 .site-content figure>a[href^="http://www.amazon.co.jp/"]:after{
 	content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAaCAMAAAAOqwd2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5QTFRFqqqq/v7+AAAA4+Pj/f394uLi+/v7/Pz85OTk6Ojo5ubm5eXl+vr6+Pj49/f36enp7Ozs6urq9vb27e3t7+/v8/Pz9PT0BAcH8PDw8fHxnZ2dysrKpKSkxcXF4ODgX19fwcHBoKCgICAg1dXVYmJim5ubx8fHYGBgzs7OxMTEn5+f5+fnwsLCPj4+YWFhwMDAnJyczMzMzc3NmJiY09PTTk5Ofn5+IiIiISEhxsbGnp6ey8vLsrKy4eHhmZmZZGRkJCQkra2t3t7erKys0NDQyMjIv7+/XV1dTExMVFRUHx8f29vbjIyM0dHR2dnZZmZmUFBQXFxcoqKiT09P3Nzc39/fr6+vTU1NOzs7OTk5l5eXOjo66+vrcnJy19fX7u7ucXFxvr6+sLCwdnZ2sbGxXl5eY2NjlpaWvLy8tbW1gYGBfHx8kJCQg4ODgICAjo6OzM3Nr7Cwn6Cgvb29k5OTfX19Nzc3ZWVluLi4q6ur0tLSBgkJtLS0w8TEIyMjCw4Ot7e3qampODg4p6enc3NzycnJJSUlFxoaKCsrtra22NjYqKioZWdnCAsLERQUmZqadXV1UFJS0dLSmpubkJGRz8/PtLW1QEND7O3thYaGPDw8X2FhIiQkvr+/4eLi1dbWamxsVFZWmJmZbG5ufH19bGxscnNzFRgYFhkZbW1tUlJSQkRE09TUhYWFRkhIDA8PWFpad3d3nJ2dcXJyODs7S0tLT1FRsLGxS01NgoKCBQgIW1xcurq6iYmJHiEhpaWlBwoKc3R0XmBgb3Fxl5iYDRAQhoaGj5CQSUtLpqamoqOjsrOzGx4eLS8vEhQUd3h41tbWHiAghISEgYODm5ycEBISZGZmkZGRKy0tFBcXPz8/w8PDg4SErq6uMzU12traXF1dlZaWMjQ0a21tDxISlJSUs7Ozi4uLpaamKy4ueHl5lZWVdnh4+fn59fX1kJKSMDMzYmRk3N3dCg0NU1NTV1lZo6OjhIaGqKmp////ZyzQkgAAAPp0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AN5gRSMAAAT9SURBVFjDzZh1UBtbFMbTLw9aoLBJNpvdTUIISUiBlAQCQYpbcWmheN3d3eXVn7u7u7u7u7u7K/+9czdkE/r6Oq8zb+blN5N7v/Ode3a/uZnwB5rBUl+JJorp8pUOampq4wwjopjvuNoaTXXsiCgntlqjOSbqoS99ZATSiktuPPgRNzK6oJCxYU6/UmQ8f0dsVEEhR6tcsJUSPkif184Mm6Nb/a2j/18oZKLKJ6J4bp7pD0q5PGwm7sbuxKMmPT29der6qYlvpFOxftu/G5r6zuF9Cpmk8uhFt36ZlDSKQt4cNi14Gy8mHS0AXHzhov1gj+9x7WcGEWr7e3YNO+4y80lJvAb7DvswCmmI5Hvn/B8o5KthZy6ssBoMAxabzWodGJhltZDptFqn02ZhOA0G6jhZ6RywWm1saL6Z0d7jgjlH58IC5GB7+4IFYD3d9hjD5PntORFv1U1GYYzBXGieYjgcFNIU5ueDbym/HPGUsNdQwaHNZKpFA93ETWzJM3Uhqw0NJpNyO22mechqwDdUZlUAFWxoUxoxzdsBr3eTD4X9XhOKvWlpoJa+ECj2FXaYhlG8hJalTiZ9/Uv0w5sUUlDx7xHFG+58mEKeoHpVmCn8CkFwI6uKq8BEYSJ9srIE4XG4BbfbPVMpOWEmqgTKL7SRTVD4MYJgAdPOfsfnHCxjKKQgcAGHJeBwCpFMWjIpKKbtZDP9CHDD+hRSVjlDFO93yjEU8mLVq0SqfB2S5WTa5bWQFZFaKcuryJTlzooKjwer2Ll7ZayV5VTFlsvKykrKlIuulT2OMjyFgKO3l8bzUSJ7Ao48OlMyJkhzrQP5bCgfzXKeI+ApQcAjR0AhpRDau0Xxa0k6mUKeqpovo0aioBJlk6RySEHRlHoikCwxpzLosAXlkpSq2BKlS+l0PwC3O97NovYivzclBVIz8qnb6XB0StKslCDNUnzZPHLzqRffjQ3UQfcGKQyFNIa4ltI9YjReStuHqrkFmZmLcbUxA5lGYzmMisjElsWLkWE0rkN50FEWVmQy29iUSxQVWVFU1GLM/QLzWlCUkpsL44wU5akt6E4wDqepG6tpW21lRZHD0RJuUUg+RNwvovjpuw8dRyE3njfk+YN/OqAdi3E8Pwc8T0KLOVp+HMby2rPhV5zggjm8YvN8Mup3DE3O5utno74PybP7+qC+qwv1Wj4CbV8jfo+oT2tEl1pQSJ3KOcove+P1orhn85BlhpnWXdhnZ8IFnY6EohfBTt1F7BDu0uk0VMLFBuzkZCBjLtimtOdi4VVYuKOuDuF33deYHi7SFzaiLqJmVmO9qimkXqX0HrrFH9/z3L53WchqRzGt2VjqQ7Ze74JeT6IYLltxAbKdwNLs7AP6yQVOm6tAr4eLHfXRwFh2h2wj7Uc1pvhxW13dGoTfpZ8SoS/DmnX6Q7DZVEkhOYWEF2y0Tlr2Aa1xCU2vX/OmUqOANS3oGI80jvOC45iYBhTs7CkYr3yfXs7ZQfV4jiPJpYEElzMhx/4Z25Rn22lsQg7HVQfLv2O3c0eCQsYF2fbVE9q4EJ4DKz5OiPtnjp1+5Pq/hULGD7H5uSt+ejqdROvyy/e+X3JhfNRAIRNC2F55VhS3Hv+YKL501vnLbAlRA4UcFcb25y0nPfnbt8+UjooqNJrqUm2UU1qpqVmZVxUTxVTlrazRDMbYZ0TzPwdm2GMG/wKaQ2cpeRnzEwAAAABJRU5ErkJggg==);
 	display:block;
@@ -374,9 +374,9 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
 
 /* アイキャッチにアニメーションを追加 */
 .post-thumbnail>img.attachment-post-thumbnail{
-	-moz-animation:gray2normal 2400ms;
-	-webkit-animation:gray2normal 2400ms;
-	-o-animation:gray2normal 2400ms;
-	animation:gray2normal 2400ms;
+	-moz-animation:gray2normal 700ms;
+	-webkit-animation:gray2normal 700ms;
+	-o-animation:gray2normal 700ms;
+	animation:gray2normal 700ms;
 }
 

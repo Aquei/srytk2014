@@ -236,7 +236,7 @@ function add_my_cache_control(){
 			$status = "public";
 		}else if(is_singular()){
 			//is_single()、is_page() 、is_attachment() のいずれかが真である場合
-			$maxAge = 12*60*60;
+			$maxAge = 7*24*60*60; //キャッシュ一週間
 			$status = "public";
 		}else if(is_archive() || is_search()){
 			//各アーカイブページが表示されている場合。アーカイブページには、カテゴリー、タグ、作成者、日付別のものがあります。 
@@ -262,8 +262,8 @@ function add_ad_dns_prefetch_code(){
 		'tpc.googlesyndication.com',
 		//'www.google-analytics.com',
 		//'ajax.cloudflare.com',
-		'i.ytimg.com',
-		'images-na.ssl-images-amazon.com',
+		//'i.ytimg.com',
+		//'images-na.ssl-images-amazon.com',
 		'www.google.com',
 		'encrypted-tbn1.gstatic.com',
 		'encrypted-tbn2.gstatic.com',
@@ -322,7 +322,7 @@ add_action('wp', 'add_hsts_header');
 function ga_tracker(){
 	//google analytics tracker
 	//inline scriptはcssより早く実行されるべき
-	echo '<script>!function(a,b,c){a.GoogleAnalyticsObject=c,a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)},a[c].l=1*new Date}(window,document,"ga"),ga("create","UA-51729378-1","auto"),ga("send","pageview");</script>';
+	echo '<script>!function(a,b,c){a.GoogleAnalyticsObject=c,a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)},a[c].l=1*new Date}(window,document,"ga"),ga("create","UA-51729378-1","auto"),ga("require","displayfeatures"),ga("send","pageview");</script>';
 }
 
 add_action('wp_head', 'ga_tracker', 1); //引数をとらず、またデフォルト(10)より早く実行
