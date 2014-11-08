@@ -320,8 +320,8 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
 	text-align:right;
 }
 
+/*
 .site-content figure>a[href^="https://www.youtube.com/"]:before{
-	/* YOUTUBEの画像 */
 	background-color:#CCFF00;
 	border:solid 1px #c4c4c4;
 	border-bottom:none;
@@ -339,6 +339,7 @@ aside.related_posts_by_taxonomy figure.gallery-item:last-child{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+*/
 .site-content figure>a[href^="https://www.youtube.com/"]:after{
 	content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAxlBMVEX///+mPTnd3d3n5+eeDgmZDgnAEQq7EQregH2/JB7LQDrSQTulIR2sPTmkEQvV1dXx8fHGfnu1Egz5+fmRDQjEEQuvEAqqDwmVDgikDwm1EArIEgvIFxDbaGPbnZu1HRjTmpi3GBKpGxbo6OjMv7/aZWDJMy3QOzWjGxX89fWsjYxvFBCYDgiOMC3npaOdFxPLyMi+Hxh0CgebDgn37+/RY1+WDglcCAWBDAiIU1Hy8vL69fW4ZGHBFxCvHRehMS3FgX77+Pg08Lg6AAAAAXRSTlMAQObYZgAAAH5JREFUeF6FxkMCxDAABdCfpDbGtm3j/peaYDZd9a0e8k2HbqP+N3abgFXMsOAY3HM1MhQHtslt08PRlGwkNa4dRbdWVyxBSXgxxvodWZSFHqV0sJRFUOUmYTibL8QCeBq33lx3e03w4Ovc6XzRFR9xJSPG/UFIQXkT8vki1w95ehBDKnWtXAAAAABJRU5ErkJggg==) " YouTubeで視聴";
 	display:block;
