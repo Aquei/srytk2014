@@ -94,7 +94,7 @@ function register_jquery() {
 	$original_file_time = filemtime(get_stylesheet_directory()."/js/sitescript.js");
 	$max_time = filemtime(get_stylesheet_directory()."/js/jquery/1.11.1/jquery.min.js");
 
-	$files_path = array(get_stylesheet_directory()."/js/srytk-common.js", get_template_directory()."/js/functions.js");
+	$files_path = array(get_stylesheet_directory()."/js/srytk-common.js", get_template_directory()."/js/functions.js", get_template_directory()."/js/schemaorg.js");
 
 	$c = count($files_path);
 
