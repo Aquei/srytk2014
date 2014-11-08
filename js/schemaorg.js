@@ -8,7 +8,7 @@ $(function(){
 		var breadcrumb = $('aside > .breadcrumbs');
 		var relatedPosts = $('aside.related_posts_by_taxonomy figure');
 		var article = $('#content > article');
-		var i,index,val,count;
+		var i,index,val,count,key;
 		elems.push(
 			{
 				elem : body,
@@ -129,11 +129,11 @@ $(function(){
 
 
 		if(elems.length){
-			count = elems.lenth;
+			count = elems.length;
 			for(i=0;i<count;++i){
 				val = elems[i];
 
-				if(val.elem.lenth){
+				if(val.elem.length){
 					for (key in val.props){
 						if(val.props.hasOwnProperty(key)){
 							val.elem.attr(key, val.props[key]);
