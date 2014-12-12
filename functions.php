@@ -230,24 +230,37 @@ function add_my_cache_control(){
 	}else{
 		$maxAge = 0;
 		$status = "private";
+
+		//ついでにcross originヘッダも付与する
+		$cors = false;
+
+
+
 		if(is_front_page()){
 			//トップページ
 			$maxAge = 1*60*60;
 			$status = "public";
+			$cors = true;
 		}else if(is_singular()){
 			//is_single()、is_page() 、is_attachment() のいずれかが真である場合
 			$maxAge = 7*24*60*60; //キャッシュ一週間
 			$status = "public";
+			$cors = true;
 		}else if(is_archive() || is_search()){
 			//各アーカイブページが表示されている場合。アーカイブページには、カテゴリー、タグ、作成者、日付別のものがあります。 
 			//検索結果のページが表示されている場合。
 			
 			$maxAge = 24*60*60;
 			$status = "public";
+			$cors = true;
 		}
 
 		header("Cache-Control: ".$status.", max-age=".$maxAge);
-		//header("X-test: test");
+
+		if($cors){
+			header("Access-Control-Allow-Origin: *");
+		}
+		
 	}
 }
 			
@@ -265,9 +278,9 @@ function add_ad_dns_prefetch_code(){
 		//'i.ytimg.com',
 		//'images-na.ssl-images-amazon.com',
 		'www.google.com',
-		'encrypted-tbn1.gstatic.com',
-		'encrypted-tbn2.gstatic.com',
-		'encrypted-tbn3.gstatic.com'
+		//'encrypted-tbn1.gstatic.com',
+		//'encrypted-tbn2.gstatic.com',
+		//'encrypted-tbn3.gstatic.com'
 	);
 
 	/*
