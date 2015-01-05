@@ -260,12 +260,20 @@ li#hatebu-ico a:hover{
 	background-color:#008ba3;
 }
 
-#twitter-ico a:before{
+#twitter-ico a:before, #twitter-follow-ico a:before{
 	content: '\f202';
 }
 
 #twitter-ico a:hover{
 	background-color:#5ccaff;
+}
+
+#twitter-follow-ico a{
+	background-color:#443742;
+}
+
+#twitter-follow-ico a:hover{
+	background-color:#CEA07E;
 }
 
 /* サイド等のサムネイル調整 */
