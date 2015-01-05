@@ -187,6 +187,18 @@ ins.adsbygoogle.footer-ad{
 	background-color:#ff6e5c;
 }
 
+#subscribe-mail-ico a:before{
+	content: '\f410';
+}
+
+#subscribe-mail-ico a{
+	background-color:#846C5B;
+}
+
+#subscribe-mail-ico a:hover{
+	background-color: #EDD9A3;
+}
+
 #hatebu-ico a{
 	background-color:#0874ba;
 }
@@ -201,6 +213,8 @@ li#hatebu-ico>a:before{
 li#hatebu-ico a:hover{
 	background-color:#5c9fff;
 }
+
+
 
 #misc-links a{
 	color:#fcfcfc;
