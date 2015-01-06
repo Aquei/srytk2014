@@ -32,9 +32,12 @@ add_action(	'wp_enqueue_scripts', 'add_base_css2014' , 8 );
  */
 
 function check_update_css(){
-	$ori_path = get_stylesheet_directory()."/style.css";
+	
+	$base_path = get_stylesheet_directory();
 
-	$paths = array(get_stylesheet_directory()."/style_meta.css", get_template_directory()."/style.css", get_stylesheet_directory()."/myStyle.css", get_stylesheet_directory()."/genericons_.css");
+	$ori_path = $base_path."/style.css";
+
+	$paths = array($base_path."/style_meta.css", $base_path."/style.css", $base_path."/myStyle.css", $base_path."/genericons_.css");
 
 	$max_time = 0;
 
@@ -89,12 +92,14 @@ add_action( 'wp_enqueue_scripts', 'cdn_genericons' ,9);
 //jqueryをjsdelivrから読んで、migateは無視する
 
 function register_jquery() {
+
+	$base_path = get_stylesheet_directory();
 	
 	//file update check
-	$original_file_time = filemtime(get_stylesheet_directory()."/js/sitescript.js");
-	$max_time = filemtime(get_stylesheet_directory()."/js/jquery/1.11.1/jquery.min.js");
+	$original_file_time = filemtime($base_path."/js/sitescript.js");
+	$max_time = filemtime($base_path."/js/jquery/1.11.2/jquery.min.js");
 
-	$files_path = array(get_stylesheet_directory()."/js/srytk-common.js", get_template_directory()."/js/functions.js", get_stylesheet_directory()."/js/schemaorg.js");
+	$files_path = array($base_path."/js/srytk-common.js", $base_path."/js/functions.js", $base_path."/js/schemaorg.js");
 
 	$c = count($files_path);
 
@@ -107,13 +112,13 @@ function register_jquery() {
 	}
 
 	if($original_file_time < $max_time){
-		$str = file_get_contents(get_stylesheet_directory()."/js/jquery/1.11.1/jquery.min.js");
+		$str = file_get_contents($base_path."/js/jquery/1.11.2/jquery.min.js");
 
 		foreach($files_path as $path){
 			$str .= file_get_contents($path);
 		}
 
-		file_put_contents(get_stylesheet_directory()."/js/sitescript.js", $str);
+		file_put_contents($base_path."/js/sitescript.js", $str);
 	}
 
 
@@ -354,3 +359,7 @@ function set_site_script(){
 }
 
 add_action('wp_footer', 'set_site_script');
+
+
+//nosniff
+add_action('wp', 'send_nosniff_header');
